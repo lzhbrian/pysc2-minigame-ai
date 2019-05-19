@@ -13,9 +13,11 @@
 
 
 
+
+
 ## Usage
 
-* Requirements: numpy pysc2
+* Requirements: numpy, pysc2
 
 * Files
 
@@ -54,6 +56,8 @@
 
 
 
+
+
 ## Overall Agent Structure
 
 * Overall structure
@@ -77,22 +81,25 @@
         - If you want to write a new agent, you need to inherit `TacticAgent` and rewrite the variable `self.possible_tactic_list` in the `setup()` function.
         - Items in `self.possible_tactic_list` are instances from class `Tactic` in [tactics.py](tactics.py).
 
-    ```python
-    import tactics
-    tactic_no_op = tactics.Tactic(
-        lambda *argv: True, # check_func
-        lambda *argv: FUNCTIONS.no_op(), # select_executor_func
-        lambda *argv: FUNCTIONS.no_op()  # execute_func
-    )
+    * Example:
 
-    class NewAgent(TacticAgent):
-        def setup(self, obs_spec, action_spec):
-            super(NewAgent, self).setup(obs_spec, action_spec)
-            self.posible_tactic_list = [
-                tactic_no_op,
-                ... # other tactics
-            ]
-    ```
+        ```python
+        import tactics
+        tactic_no_op = tactics.Tactic(
+            lambda *argv: True, # check_func
+            lambda *argv: FUNCTIONS.no_op(), # select_executor_func
+            lambda *argv: FUNCTIONS.no_op()  # execute_func
+        )
+        
+        class NewAgent(TacticAgent):
+            def setup(self, obs_spec, action_spec):
+                super(NewAgent, self).setup(obs_spec, action_spec)
+                self.posible_tactic_list = [
+                    tactic_no_op,
+                    ... # other tactics
+                ]
+        ```
+
 
 
 
@@ -120,7 +127,9 @@
 
 
 
-## Result
+
+
+## Results
 
 For each game, we run 10 times and record the results. We can see that we outperform DeepMind's best baseline in [[1]](https://arxiv.org/abs/1708.04782) in terms of mean score across 4 games (except DefeatRoaches) and some of our scores are very competitive compared to human players'.
 
