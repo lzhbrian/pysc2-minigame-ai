@@ -1,6 +1,6 @@
 """
 agent for pysc2
-author: lzhbrian
+author: lzhbrian (https://lzhbrian.me)
 date: 2019.5.18
 license: MIT
 """

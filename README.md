@@ -6,7 +6,7 @@
         * CollectMineralsAndGas: 5010
         * DefeatRoaches: 91
         * DefeatZerglingsAndBanelings: 220
-        * BuildMarine: 132
+        * BuildMarines: 132
 * Author
     * [林子恒](https://lzhbrian.me) 1801213773
     * lzhbrian@gmail.com
@@ -49,7 +49,7 @@
     # DefeatZerglingsAndBanelings
     python -m pysc2.bin.agent --map DefeatZerglingsAndBanelings --agent pysc2.agents.final_agent_lzh.DefeatZerglingsAndBanelings --use_feature_units
     
-    # BuildMarine
+    # BuildMarines
     python -m pysc2.bin.agent --map BuildMarines --agent pysc2.agents.final_agent_lzh.BuildMarines --use_feature_units
     ```
 
