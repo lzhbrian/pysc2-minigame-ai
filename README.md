@@ -13,11 +13,16 @@
 
 
 
+__TOC__
 
+[TOC]
+
+
+
+<p style="page-break-after: always;">&nbsp;</p>
+<p style="page-break-before: always;">&nbsp;</p>
 
 ## Usage
-
-* Requirements: numpy, pysc2
 
 * Files
 
@@ -30,7 +35,7 @@
 
     * Install StarcraftII from battle.net (or [link](https://github.com/Blizzard/s2client-proto#downloads) for linux)
     * download minigame map in [link](https://github.com/deepmind/pysc2/releases/download/v1.2/mini_games.zip), extract and put in to your `StarcraftII/Maps/` directory
-    * install pysc2 as [instructed](https://github.com/deepmind/pysc2) (`pip install pysc2`)
+    * install pysc2, numpy as [instructed](https://github.com/deepmind/pysc2) (`pip install pysc2, numpy`)
     * put [final_agent_lzh.py](final_agent_lzh.py) and [tactics.py](tactics.py) in your installed site-packages `pysc2/agents` path
         * for example `~\Anaconda3\Lib\site-packages\pysc2\agents\` (if you are using Anaconda)
 
@@ -52,11 +57,8 @@
     # BuildMarines
     python -m pysc2.bin.agent --map BuildMarines --agent pysc2.agents.final_agent_lzh.BuildMarines --use_feature_units
     ```
-
-
-
-
-
+<p style="page-break-after: always;">&nbsp;</p>
+<p style="page-break-before: always;">&nbsp;</p>
 
 ## Overall Agent Structure
 
@@ -101,8 +103,6 @@
         ```
 
 
-
-
 ## Strategy
 
 * Strategy for each game: (Here we briefly summarize them. __The code in [final_agent_lzh.py](final_agent_lzh.py) is extremely clear and self-documented.__)
@@ -125,8 +125,8 @@
         * if Barracks count >= 7, then train marine
         * if SCV count < 20, then train SCV
 
-
-
+<p style="page-break-after: always;">&nbsp;</p>
+<p style="page-break-before: always;">&nbsp;</p>
 
 
 ## Results
@@ -179,13 +179,9 @@ For each game, we run 10 times and record the results. We can see that we outper
     | __Ours__                                                     | __127__ | 5    | __132__ |
 
 
-
-
 ## Reference
 
 [1] [StarCraft II: A New Challenge for Reinforcement Learning](https://arxiv.org/abs/1708.04782). in ArXiv
-
-
 
 ## Useful links
 
@@ -193,8 +189,6 @@ Some of the API usage is learned from the following links
 
 * https://starcraft.fandom.com/wiki/StarCraft_Wiki
 * https://chatbotslife.com/building-a-basic-pysc2-agent-b109cde1477c
-
-
 
 ## License
 
